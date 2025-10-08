@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello World · Vibecoding</title>
+    <style>
+      /* --- Minimal, clean CSS for a friendly first page --- */
+      :root {
+        --bg: #0f172a;          /* slate-900 */
+        --card: #111827;        /* gray-900 */
+        --text: #e5e7eb;        /* gray-200 */
+        --accent: #60a5fa;      /* blue-400 */
+        --accent-2: #a78bfa;    /* violet-400 */
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(60% 80% at 50% 30%, rgba(96,165,250,0.15), transparent 60%),
+                    radial-gradient(40% 60% at 70% 70%, rgba(167,139,250,0.12), transparent 60%),
+                    var(--bg);
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+      main {
+        width: min(680px, 100%);
+        background: linear-gradient(180deg, #0b1220 0%, #0b1220cc 100%);
+        border: 1px solid #1f2937; /* gray-800 */
+        border-radius: 1.25rem;
+        padding: clamp(1.25rem, 2.5vw, 2rem);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+      h1 {
+        margin: 0 0 0.5rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.1;
+      }
+      p {
+        margin: 0.25rem 0 1.25rem;
+        font-size: clamp(1rem, 2.6vw, 1.125rem);
+        color: #cbd5e1; /* slate-300 */
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        padding: .5rem .75rem;
+        border-radius: 999px;
+        background: rgba(96,165,250,0.12);
+        border: 1px solid rgba(96,165,250,0.3);
+        font-size: .875rem;
+        margin-bottom: 1rem;
+      }
+      .cta {
+        display: inline-block;
+        padding: .75rem 1rem;
+        border-radius: .875rem;
+        border: 1px solid #1f2937;
+        background: linear-gradient(180deg, rgba(96,165,250,0.25), rgba(167,139,250,0.2));
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+        transition: transform .12s ease, filter .12s ease, background .2s ease;
+      }
+      .cta:focus { outline: 2px solid var(--accent); outline-offset: 3px; }
+      .cta:hover { transform: translateY(-1px); filter: brightness(1.1); }
+      .code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        background: #0b1220;
+        border: 1px dashed #1f2937;
+        padding: .75rem;
+        border-radius: .75rem;
+        color: #e5e7eb;
+        overflow-x: auto;
+        margin-top: 1rem;
+      }
+      footer {
+        margin-top: 1rem;
+        font-size: .875rem;
+        color: #94a3b8; /* slate-400 */
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <span class="badge" aria-label="Course badge">✨ Vibecoding · Project 1</span>
+      <h1>Hello, World!</h1>
+      <p>
+        Your very first web page, crafted with plain <strong>HTML</strong> and a pinch of <strong>CSS</strong>.
+        It scales nicely from mobile to desktop and keeps the noise down while you learn the ropes.
+      </p>
+
+      <a class="cta" href="#" onclick="alert('Hello, Brian! 🚀')">Click me</a>
+
+      <div class="code" aria-label="Snippet">
+        <strong>Tip:</strong> In a real project you’d usually split CSS into a separate <em>style.css</em> file and link it
+        with <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>. For today, keeping it all in one file makes it easy to preview.
+      </div>
+
+      <footer>
+        Made with ♥ for your Vibecoding playground. Try editing the text, styles, or the button to see instant changes.
+      </footer>
+    </main>
+  </body>
+</html>
