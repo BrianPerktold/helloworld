@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brian Perktold · Link in Bio</title>
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/3/30/Bull_icon.svg">
+    <style>
+      :root {
+        --bg1: #0b0b0b;
+        --bg2: #1a1a1a;
+        --text: #fce45b;   /* primary text + accent */
+        --muted: #d6c556;  /* secondary text */
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Consolas, "Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+        background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 480px;
+        padding: 2rem;
+      }
+
+      /* Avatar SVG ring */
+      .avatar-wrap { width: 120px; height: 120px; margin: 0 auto 1rem; }
+      .avatar-ring { display:block; width: 120px; height: 120px; }
+
+      h1 {
+        font-size: 1.6rem;
+        margin: 0.75rem 0 0.15rem;
+        letter-spacing: 0.01em;
+      }
+      p.role {
+        margin: 0 0 1.25rem;
+        color: var(--muted);
+      }
+      p.bio {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
+
+      .link-row {
+        display: flex;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 2.25rem;
+      }
+
+      .icon-link {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #111;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      }
+      .icon-link:hover { transform: scale(1.08); box-shadow: 0 0 18px rgba(252,228,91,0.8); }
+      .icon-link img { width: 26px; height: 26px; filter: invert(90%) sepia(50%) saturate(300%) hue-rotate(10deg); }
+
+      .footer { font-size: 0.85rem; color: var(--muted); opacity: 0.8; }
+
+      @media (max-width: 480px) {
+        .link-row { gap: 1rem; }
+        .icon-link { width: 46px; height: 46px; }
+        h1 { font-size: 1.4rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Monospace-friendly SVG avatar ring -->
+      <div class="avatar-wrap" aria-hidden="true">
+        <svg class="avatar-ring" viewBox="0 0 120 120" role="img" aria-label="Profile placeholder ring">
+          <circle cx="60" cy="60" r="59" fill="transparent" stroke="#fce45b" stroke-width="1" />
+        </svg>
+      </div>
+
+      <h1>Brian Perktold</h1>
+      <p class="role">Design Engineer</p>
+      <p class="bio">Hi, I'm Brian — a design engineer based in Oslo 🇳🇴 passionate about crafting accessible and elegant digital & physical experiences.</p>
+
+      <div class="link-row">
+        <a class="icon-link" href="https://asbull.no" target="_blank" title="AS BULL">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Bull_icon.svg" alt="AS BULL icon">
+        </a>
+        <a class="icon-link" href="https://github.com/BrianPerktold" target="_blank" title="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon">
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/brian-perktold-622b5b386/" target="_blank" title="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn icon">
+        </a>
+        <a class="icon-link" href="mailto:bp@asbull.no" title="Email">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email icon">
+        </a>
+      </div>
+
+      <p class="footer">© 2025 Brian Perktold · Made with HTML & CSS</p>
+    </div>
+  </body>
+</html>
